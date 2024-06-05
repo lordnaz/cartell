@@ -43,6 +43,7 @@ window.config = {
     textMuted: '#7983bb',
     borderColor: '#434968'
   },
+  displayCustomizer: false,
   enableMenuLocalStorage: true // Enable menu state with local storage support
 };
 
