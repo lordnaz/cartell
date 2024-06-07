@@ -166,7 +166,7 @@ use App\Http\Controllers\UserModule\SubscriptionController;;
 
 // CarTell route starts here
 Route::get('/', [Home::class, 'index'])->name('home');
-// Route::get('/', [MiscComingSoon::class, 'index'])->name('pages-misc-comingsoon');
+Route::get('/coming_soon', [MiscComingSoon::class, 'index'])->name('pages-misc-comingsoon');
 Route::post('/new_subscription', [ SubscriptionController::class, "new_subscription" ])->name('new_subscription');
 Route::get('/pages/misc-comingsoon-return', [MiscComingSoonReturn::class, 'index'])->name('pages-misc-comingsoon-return');
 
