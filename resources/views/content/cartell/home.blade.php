@@ -9,29 +9,31 @@
 @section('content')
 <!-- Help Center Header: Start -->
 
-<nav class="navbar" style="background-color: #C81927">
+<nav class="navbar" style="background-color: #fdbb2d">
   <div class="container-fluid">
-    <span class="navbar-brand mb-0 h1"><h3 class="text-white">CARTELL</h3></span>
+    <span class="navbar-brand mb-0 h1"><h3 class="text-primary" style="font-style: oblique;">CARTELL</h3></span>
     <div class="float-right">
-        <a href="{{url('/auth/login-cover')}}" class="btn btn-dark" target="_blank"><span class="tf-icons ti ti-login scaleX-n1-rtl me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
+        <a href="{{url('/auth/login-cover')}}" class="btn btn-primary" target="_blank"><span class="tf-icons ti ti-login scaleX-n1-rtl me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
     </div>
   </div>
 </nav>
 
 
 
-<section class="section-py first-section-pt help-center-header position-relative overflow-hidden text-white" style="background-color: #C81927">
+<section class="section-py first-section-pt help-center-header position-relative overflow-hidden text-white" 
+style="background: rgb(254,222,154);
+background: linear-gradient(360deg, rgba(254,222,154,1) 0%, rgba(253,187,45,1) 100%);">
   <!-- <img class="banner-bg-img" src="{{asset('assets/img/pages/header.png')}}" alt="Help center header"> -->
 
-  <h3 class="text-center text-white"> Isi maklumat dibawah untuk sewaan kereta anda </h3>
+  <h3 class="text-center text-primary">Book and rent a car with us now!</h3>
   <div class="input-wrapper input-group input-group-lg input-group-merge position-relative mx-auto">
     <span class="input-group-text" id="basic-addon1"><i class="ti ti-navigation"></i></span> 
-    <input type="text" class="form-control" placeholder="Alamat penghantaran.." aria-label="Search" aria-describedby="basic-addon1" />
+    <input type="text" class="form-control" placeholder="Address" aria-label="Search" aria-describedby="basic-addon1" />
   </div>
   <br>
 
   <div class="input-wrapper input-group input-group-lg input-group-merge mx-auto">
-    <label for="">Tarikh dan Masa Ambilan</label>
+    <label class="text-primary" for=""><b>Pickup Date and Time</b></label>
   </div>
   <div class="input-wrapper input-group input-group-lg input-group-merge position-relative mx-auto">
     <span class="input-group-text" id="basic-addon1"><i class="ti ti-calendar"></i></span> 
@@ -41,7 +43,7 @@
 
   
   <div class="input-wrapper input-group input-group-lg input-group-merge mx-auto">
-    <label for="">Tarikh dan Masa Hantar</label>
+    <label class="text-primary" for=""><b>Dropoff Date and Time</b></label>
   </div>
 
   <div class="input-wrapper input-group input-group-lg input-group-merge mx-auto">
@@ -54,10 +56,10 @@
   <div class="input-wrapper input-group-lg position-relative mx-auto">
         <div class="row mt-3">
           <div class="d-grid gap-2 col-lg-6 mx-auto">
-            <button class="btn btn-warning btn-lg" type="button">Pickup</button>
+            <button class="btn btn-outline-primary btn-lg" type="button" style="border: 2px solid #C81927"><b>Delivery</b></button>
           </div>
           <div class="d-grid gap-2 col-lg-6 mx-auto">
-            <button class="btn btn-info btn-lg" type="button">Delivery</button>
+            <button class="btn btn-primary btn-lg" type="button">Pickup</button>
           </div>
         </div>
   </div>
@@ -66,14 +68,14 @@
 
   
 </div>
-
-  <p class="text-center px-3 mb-0">Sewa kereta melalui cartell.my, harga dijamin halal</p>
+  <br>
+  <p class="text-center text-primary px-3 mb-0">Rent a car with cartell.my marketplace</p>
   <br><br>
 </section>
 <!-- Help Center Header: End -->
 
 <!-- Popular Articles: Start -->
-<section class="section-py">
+<section class="section-py" style="padding-top: 50px;">
   <div class="container">
     <h3 class="text-center mb-4">Product Catalogue</h3>
     <div class="row">

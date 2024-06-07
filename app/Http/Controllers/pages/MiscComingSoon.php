@@ -9,13 +9,11 @@ use App\Models\AnalyticModule\Analytics;
 
 class MiscComingSoon extends Controller
 {
-  public function index()
+  public function index(Request $request)
   {
-    $public_ip = file_get_contents('https://api.ipify.org');
+    $public_ip = $request->ip();
 
     $type = 'subscribe_page_visit';
-
-    
 
     $geo_location = Location::get($public_ip);
 
