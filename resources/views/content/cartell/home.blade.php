@@ -11,7 +11,9 @@
 
 <nav class="navbar" style="background-color: #c81927">
   <div class="container-fluid">
-    <span class="navbar-brand mb-0 h1"><h3 class="text-white" style="font-style: oblique;">CARTELL</h3></span>
+    <span class="navbar-brand mb-0 h1">
+      <img src="{{asset('assets/img/branding/cartell_logo.png')}}" alt="CARTELL" class="w-px-150">  
+    </span>
     <div class="float-right">
         <a href="{{url('/auth/login-cover')}}" class="btn btn-white" target="_blank"><span class="tf-icons ti ti-login scaleX-n1-rtl me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
     </div>
@@ -65,8 +67,6 @@ background: linear-gradient(360deg, rgba(233,73,87,1) 0%, rgba(200,25,39,1) 100%
   </div>
 
 
-
-  
 </div>
   <br>
   <p class="text-center text-white px-3 mb-0">Rent a car with cartell.my marketplace</p>
@@ -74,44 +74,578 @@ background: linear-gradient(360deg, rgba(233,73,87,1) 0%, rgba(200,25,39,1) 100%
 </section>
 <!-- Help Center Header: End -->
 
-<!-- Popular Articles: Start -->
-<section class="section-py" style="padding-top: 50px;">
+<!-- Category Area: Start  -->
+
+<section class="section-py" style="padding-top: 50px; background-color: white;">
   <div class="container">
-    <h3 class="text-center mb-4 text-primary">Rental Car in your Area</h3>
+  <h3 class="text-primary">Popular Search</h3>
+  <p class="mb-4">From Cars to Vans, Lorry's to Bikes, Cameras to Outdoors and many more...</p>
     <div class="row">
-      <div class="col-lg-8 mx-auto">
+      <div class="col-2">
+        <div class="card shadow-none">
+          <div class="card-body text-center">
+            <!-- <div class="badge rounded-pill p-2 bg-label-danger mb-2"><i class="ti ti-car ti-sm"></i></div> -->
+            <img src="{{asset('assets/img/illustrations/car_category.png')}}" alt="CAR" class="w-75 h-75" style="">
+            <h6 class="card-title">CARS</h6>
+            <!-- <small>Orders</small> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card shadow-none">
+          <div class="card-body text-center">
+            <!-- <div class="badge rounded-pill p-2 bg-label-danger mb-2"><i class="ti ti-car ti-sm"></i></div> -->
+            <img src="{{asset('assets/img/illustrations/van_category.png')}}" alt="VAN" class="w-75 h-75" style="">
+            <h6 class="card-title">VAN</h6>
+            <!-- <small>Orders</small> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card shadow-none">
+          <div class="card-body text-center">
+            <!-- <div class="badge rounded-pill p-2 bg-label-danger mb-2"><i class="ti ti-car ti-sm"></i></div> -->
+            <img src="{{asset('assets/img/illustrations/lorry_category.png')}}" alt="LORRY" class="w-75 h-75" style="">
+            <h6 class="card-title">LORRY</h6>
+            <!-- <small>Orders</small> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card shadow-none">
+          <div class="card-body text-center">
+            <!-- <div class="badge rounded-pill p-2 bg-label-danger mb-2"><i class="ti ti-car ti-sm"></i></div> -->
+            <img src="{{asset('assets/img/illustrations/bike_category.png')}}" alt="BIKE" class="w-75 h-75" style="">
+            <h6 class="card-title">BIKE</h6>
+            <!-- <small>Orders</small> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card shadow-none">
+          <div class="card-body text-center">
+            <!-- <div class="badge rounded-pill p-2 bg-label-danger mb-2"><i class="ti ti-car ti-sm"></i></div> -->
+            <img src="{{asset('assets/img/illustrations/camera_category.png')}}" alt="CAMERA" class="w-75 h-75" style="">
+            <h6 class="card-title">CAMERA</h6>
+            <!-- <small>Orders</small> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="card shadow-none">
+          <div class="card-body text-center">
+            <!-- <div class="badge rounded-pill p-2 bg-label-danger mb-2"><i class="ti ti-car ti-sm"></i></div> -->
+            <img src="{{asset('assets/img/illustrations/outdoor_category.png')}}" alt="OUTDOOR" class="w-75 h-75" style="">
+            <h6 class="card-title">OUTDOOR</h6>
+            <!-- <small>Orders</small> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-              <div class="card border shadow-none">
-                <div class="card-body text-center">
-                  <div class="d-flex gap-3">
-                    <div class="flex-shrink-0 d-flex align-items-center">
-                      <img src="{{asset('assets/img/car/car_suv.jpg')}}" alt="google home" class="w-px-100">
+<!-- Category Area: End  -->
+
+<!-- Popular Articles: Start -->
+<section class="section-py" style="background-color: white;">
+  <div class="container">
+    <h3 class="mb-4 text-primary">Rental Car in your Area</h3>
+    <div class="row">
+      <div class="col-lg-8">
+              <!-- featured START  -->
+              <div class="row">
+                <div class="col">
+
+                  <div class="row text-center bg-warning m-0">
+                    <h6 class="card-subtitle text-dark m-1">Featured</h6>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="card border border-warning rounded-0 shadow-none mb-1">
+                        <div class="card-body" style="font-size: small">
+                          <img class="img-fluid d-flex mx-auto rounded mb-1" src="{{asset('assets/img/car/perodua_axia.jpeg')}}" alt="Card image cap" />
+                          <strong class="card-text text-dark">Perodua Axia XM 1.3 (White) Manual</strong><br>
+
+                          <span class="me-1"><i class="ti ti-users ti-xs"></i> 4 Seat</span><br>
+                          <span class="me-1"><i class="ti ti-map-pin ti-xs"></i> Batu Caves, Selangor</span><br>
+                          <span class="me-1"><i class="ti ti-car ti-xs"></i> Hatchback</span><br>
+                          <span class="me-1 badge bg-label-primary">Petrol</span>
+
+                          
+                          
+
+                          <div class="d-grid mt-4">
+                            <div class="fs-6"><s class="text-muted">RM250</s>&nbsp<b class="text-primary">RM200</b> /<span class="text-primary">Day</span></div>
+                            <button type="button" class="btn btn-sm btn-warning">Book Now!</button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="flex-grow-1">
-                      <div class="row">
-                        <div class="col-md-8">
-                          <p class="me-3"><a href="javascript:void(0)" class="text-body">Proton X50</a></p>
-                          <div class="text-muted mb-2 d-flex flex-wrap"><span class="me-1">Owner:</span> <a href="javascript:void(0)" class="me-3">Zakirin</a> <span class="badge bg-label-success">Available</span></div>
-                          <div class="text-muted mb-2 d-flex flex-wrap"><span class="me-1">Type:</span> <a href="javascript:void(0)" class="me-3">SUV</a></div>
-                          <div class="text-muted mb-2 d-flex flex-wrap"><span class="me-1">Seat:</span>
-                          <!-- <div class="demo-inline-spacing"> -->
-                            <p>
-                              <span class="badge badge-center bg-primary">1</span>
-                              <span class="badge badge-center bg-primary">2</span>
-                              <span class="badge badge-center bg-primary">3</span>
-                              <span class="badge badge-center bg-primary">4</span>
-                              <span class="badge badge-center bg-primary">5</span>
-                              <span class="badge badge-center bg-secondary">6</span>
-                            </p>
-                          <!-- </div> -->
+                  </div>
+                
+                </div>
+                <div class="col">
+
+                  <div class="row text-center bg-warning m-0">
+                    <h6 class="card-subtitle text-dark m-1">Featured</h6>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="card border border-warning rounded-0 shadow-none mb-1">
+                        <div class="card-body" style="font-size: small">
+                          <!-- <img class="img-fluid d-flex mx-auto rounded mb-1" src="{{asset('assets/img/car/lambo.jpeg')}}" alt="Card image cap" /> -->
+                          <div class="flex-shrink-0 d-flex align-items-center">
+                            <img src="{{asset('assets/img/car/lambo.jpeg')}}" alt="google home" class="img-fluid d-flex mx-auto rounded mb-1" style="border-radius: 0.375rem;">
                           </div>
                           
+                          <strong class="card-text text-dark">Lamborghini Abentadol XM 1.5 (Yellow) Manual</strong><br>
+
+                          <span class="me-1"><i class="ti ti-users ti-xs"></i> 2 Seat</span><br>
+                          <span class="me-1"><i class="ti ti-map-pin ti-xs"></i> Kuala Lumpur</span><br>
+                          <span class="me-1"><i class="ti ti-car ti-xs"></i> Sports</span><br>
+                          <span class="me-1 badge bg-label-primary">Petrol</span>
+
+                          
+                          <div class="d-grid mt-4">
+                            <div class="fs-6"><s class="text-muted">RM1250</s>&nbsp<b class="text-primary">RM1000</b> /<span class="text-primary">Day</span></div>
+                            <button type="button" class="btn btn-sm btn-warning">Book Now!</button>
+                          </div>
                         </div>
-                        <div class="col-md-4">
-                          <div class="text-md-end">
-                            <button type="button" class="btn-close btn-pinned" aria-label="Close"></button>
-                            <div class="my-2 my-md-4 mb-md-5"><s class="text-muted">RM250</s>&nbsp<span class="text-primary">RM200</span> /<span class="text-primary">Day</span></div>
-                            <button type="button" class="btn btn-md btn-success mt-md-3">Book Now!</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col">
+
+                  <div class="row text-center bg-warning m-0">
+                    <h6 class="card-subtitle text-dark m-1">Featured</h6>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="card border border-warning rounded-0 shadow-none mb-1">
+                        <div class="card-body" style="font-size: small">
+                          <!-- <img class="img-fluid d-flex mx-auto rounded mb-1" src="{{asset('assets/img/car/byd_dolphin.jpeg')}}" alt="Card image cap" /> -->
+                          <div class="flex-shrink-0 d-flex align-items-center">
+                            <img src="{{asset('assets/img/car/byd_dolphin.jpeg')}}" alt="google home" class="img-fluid d-flex mx-auto rounded mb-1" style="border-radius: 0.375rem;">
+                          </div>
+
+                          <strong class="card-text text-dark">Build Your Dream, BYD Dolphin GTR 2.0 (A) EV</strong><br>
+
+                          <span class="me-1"><i class="ti ti-users ti-xs"></i> 4 Seat</span><br>
+                          <span class="me-1"><i class="ti ti-map-pin ti-xs"></i> Tanjung Malim, Perak</span><br>
+                          <span class="me-1"><i class="ti ti-car ti-xs"></i> Hatchback</span><br>
+                          <span class="me-1 badge bg-label-success">EV</span>
+
+                          
+                          <div class="d-grid mt-4">
+                          <div class="fs-6"><s class="text-muted">RM350</s>&nbsp<b class="text-primary">RM200</b> /<span class="text-primary">Day</span></div>
+                            <button type="button" class="btn btn-sm btn-warning">Book Now!</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <!-- featured END   -->
+
+              <div class="row" style="overflow-y: scroll; height: 800px; margin-top: 25px;">
+                <div class="card border border-start-0 border-end-0 rounded-0 shadow-none mb-1 mt-4">
+                  <div class="card-body text-center">
+                    <div class="d-flex gap-3">
+                      <div class="flex-shrink-0 d-flex align-items-center">
+                        <img src="{{asset('assets/img/car/supra.jpeg')}}" alt="google home" class="w-px-150" style="border-radius: 0.375rem;">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="row">
+                        <div class="text-left" style="text-align: left !important">
+                        <strong class="me-3"><a href="javascript:void(0)" class="text-black">Toyota Supra XM 2.4 (A) ORI MILEAGE</a></strong>
+                        </div>
+                        
+                          <div class="col-md-8" style="font-size: small">
+                            
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-users ti-xs"></i> 2 Seat</span><br>
+                                  <span class="me-1"><i class="ti ti-map-pin ti-xs"></i> Kuala Lumpur</span>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-car ti-xs"></i> Sedan</span><br>
+                                  <span class="me-1 badge bg-label-primary">Petrol</span>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-md-4">
+                            <div class="text-md-end">
+                              <!-- <button type="button" class="btn-close btn-pinned" aria-label="Close"></button> -->
+                              <div class=""><s class="text-muted">RM250</s>&nbsp<b class="text-primary">RM200</b> /<span class="text-primary">Day</span></div>
+                              <button type="button" class="btn btn-sm btn-success mt-3">Book Now!</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card border border-start-0 border-end-0 rounded-0 shadow-none mb-1">
+                  <div class="card-body text-center">
+                    <div class="d-flex gap-3">
+                      <div class="flex-shrink-0 d-flex align-items-center">
+                        <img src="{{asset('assets/img/car/ford.jpeg')}}" alt="google home" class="w-px-150" style="border-radius: 0.375rem;">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="row">
+                        <div class="text-left" style="text-align: left !important">
+                        <strong class="me-3"><a href="javascript:void(0)" class="text-black">Ford Ranger Raptor XM 2.0 (A)</a></strong>
+                        </div>
+                        
+                          <div class="col-md-8" style="font-size: small">
+                            
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-users ti-xs"></i> 4 Seat</span><br>
+                                  <span class="me-1"><i class="ti ti-map-pin ti-xs"></i> Petaling Jaya</span>                                
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                <span class="me-1"><i class="ti ti-car ti-xs"></i> Pickup</span><br>
+                                  <span class="badge bg-label-info">Diesel</span>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-md-4">
+                            <div class="text-md-end">
+                              <!-- <button type="button" class="btn-close btn-pinned" aria-label="Close"></button> -->
+                              <div class=""><b class="text-primary">RM300</b> /<span class="text-primary">Day</span></div>
+                              <button type="button" class="btn btn-sm btn-success mt-3">Book Now!</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="card border border-start-0 border-end-0 rounded-0 shadow-none mb-1">
+                  <div class="card-body text-center">
+                    <div class="d-flex gap-3">
+                      <div class="flex-shrink-0 d-flex align-items-center">
+                        <img src="{{asset('assets/img/car/proton.jpeg')}}" alt="google home" class="w-px-150" style="border-radius: 0.375rem;">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="row">
+                        <div class="text-left" style="text-align: left !important">
+                        <strong class="me-3"><a href="javascript:void(0)" class="text-black">Proton S70 XM 1.6 (A) EBONY BLACK</a></strong>
+                        </div>
+                        
+                          <div class="col-md-8" style="font-size: small">
+                            
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-users ti-xs"></i> 4 Seat</span><br>
+                                  <span class="me-1"><i class="ti ti-map-pin ti-xs"></i> Shah Alam</span>
+                                  
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-car ti-xs"></i>Sedan</span><br>
+                                  <span class="badge bg-label-success">EV</span>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-md-4">
+                            <div class="text-md-end">
+                              <!-- <button type="button" class="btn-close btn-pinned" aria-label="Close"></button> -->
+                              <div class=""><s class="text-muted">RM150</s>&nbsp<b class="text-primary">RM100</b> /<span class="text-primary">Day</span></div>
+                              <button type="button" class="btn btn-sm btn-success mt-3">Book Now!</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="card border border-start-0 border-end-0 rounded-0 shadow-none mb-1 mt-4">
+                  <div class="card-body text-center">
+                    <div class="d-flex gap-3">
+                      <div class="flex-shrink-0 d-flex align-items-center">
+                        <img src="{{asset('assets/img/car/supra.jpeg')}}" alt="google home" class="w-px-150" style="border-radius: 0.375rem;">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="row">
+                        <div class="text-left" style="text-align: left !important">
+                        <strong class="me-3"><a href="javascript:void(0)" class="text-black">Toyota Supra XM 2.4 (A) ORI MILEAGE</a></strong>
+                        </div>
+                        
+                          <div class="col-md-8" style="font-size: small">
+                            
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-users ti-xs"></i> 2 Seat</span><br>
+                                  <span class="me-1"><i class="ti ti-map-pin ti-xs"></i> Kuala Lumpur</span>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-car ti-xs"></i> Sedan</span><br>
+                                  <span class="me-1 badge bg-label-primary">Petrol</span>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-md-4">
+                            <div class="text-md-end">
+                              <!-- <button type="button" class="btn-close btn-pinned" aria-label="Close"></button> -->
+                              <div class=""><s class="text-muted">RM250</s>&nbsp<b class="text-primary">RM200</b> /<span class="text-primary">Day</span></div>
+                              <button type="button" class="btn btn-sm btn-success mt-3">Book Now!</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card border border-start-0 border-end-0 rounded-0 shadow-none mb-1">
+                  <div class="card-body text-center">
+                    <div class="d-flex gap-3">
+                      <div class="flex-shrink-0 d-flex align-items-center">
+                        <img src="{{asset('assets/img/car/ford.jpeg')}}" alt="google home" class="w-px-150" style="border-radius: 0.375rem;">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="row">
+                        <div class="text-left" style="text-align: left !important">
+                        <strong class="me-3"><a href="javascript:void(0)" class="text-black">Ford Ranger Raptor XM 2.0 (A)</a></strong>
+                        </div>
+                        
+                          <div class="col-md-8" style="font-size: small">
+                            
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-users ti-xs"></i> 4 Seat</span><br>
+                                  <span class="me-1"><i class="ti ti-map-pin ti-xs"></i> Petaling Jaya</span>                                
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                <span class="me-1"><i class="ti ti-car ti-xs"></i> Pickup</span><br>
+                                  <span class="badge bg-label-info">Diesel</span>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-md-4">
+                            <div class="text-md-end">
+                              <!-- <button type="button" class="btn-close btn-pinned" aria-label="Close"></button> -->
+                              <div class=""><b class="text-primary">RM300</b> /<span class="text-primary">Day</span></div>
+                              <button type="button" class="btn btn-sm btn-success mt-3">Book Now!</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="card border border-start-0 border-end-0 rounded-0 shadow-none mb-1">
+                  <div class="card-body text-center">
+                    <div class="d-flex gap-3">
+                      <div class="flex-shrink-0 d-flex align-items-center">
+                        <img src="{{asset('assets/img/car/proton.jpeg')}}" alt="google home" class="w-px-150" style="border-radius: 0.375rem;">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="row">
+                        <div class="text-left" style="text-align: left !important">
+                        <strong class="me-3"><a href="javascript:void(0)" class="text-black">Proton S70 XM 1.6 (A) EBONY BLACK</a></strong>
+                        </div>
+                        
+                          <div class="col-md-8" style="font-size: small">
+                            
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-users ti-xs"></i> 4 Seat</span><br>
+                                  <span class="me-1"><i class="ti ti-map-pin ti-xs"></i> Shah Alam</span>
+                                  
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-car ti-xs"></i>Sedan</span><br>
+                                  <span class="badge bg-label-success">EV</span>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-md-4">
+                            <div class="text-md-end">
+                              <!-- <button type="button" class="btn-close btn-pinned" aria-label="Close"></button> -->
+                              <div class=""><s class="text-muted">RM150</s>&nbsp<b class="text-primary">RM100</b> /<span class="text-primary">Day</span></div>
+                              <button type="button" class="btn btn-sm btn-success mt-3">Book Now!</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card border border-start-0 border-end-0 rounded-0 shadow-none mb-1 mt-4">
+                  <div class="card-body text-center">
+                    <div class="d-flex gap-3">
+                      <div class="flex-shrink-0 d-flex align-items-center">
+                        <img src="{{asset('assets/img/car/supra.jpeg')}}" alt="google home" class="w-px-150" style="border-radius: 0.375rem;">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="row">
+                        <div class="text-left" style="text-align: left !important">
+                        <strong class="me-3"><a href="javascript:void(0)" class="text-black">Toyota Supra XM 2.4 (A) ORI MILEAGE</a></strong>
+                        </div>
+                        
+                          <div class="col-md-8" style="font-size: small">
+                            
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-users ti-xs"></i> 2 Seat</span><br>
+                                  <span class="me-1"><i class="ti ti-map-pin ti-xs"></i> Kuala Lumpur</span>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-car ti-xs"></i> Sedan</span><br>
+                                  <span class="me-1 badge bg-label-primary">Petrol</span>
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-md-4">
+                            <div class="text-md-end">
+                              <!-- <button type="button" class="btn-close btn-pinned" aria-label="Close"></button> -->
+                              <div class=""><s class="text-muted">RM250</s>&nbsp<b class="text-primary">RM200</b> /<span class="text-primary">Day</span></div>
+                              <button type="button" class="btn btn-sm btn-success mt-3">Book Now!</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card border border-start-0 border-end-0 rounded-0 shadow-none mb-1">
+                  <div class="card-body text-center">
+                    <div class="d-flex gap-3">
+                      <div class="flex-shrink-0 d-flex align-items-center">
+                        <img src="{{asset('assets/img/car/ford.jpeg')}}" alt="google home" class="w-px-150" style="border-radius: 0.375rem;">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="row">
+                        <div class="text-left" style="text-align: left !important">
+                        <strong class="me-3"><a href="javascript:void(0)" class="text-black">Ford Ranger Raptor XM 2.0 (A)</a></strong>
+                        </div>
+                        
+                          <div class="col-md-8" style="font-size: small">
+                            
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-users ti-xs"></i> 4 Seat</span><br>
+                                  <span class="me-1"><i class="ti ti-map-pin ti-xs"></i> Petaling Jaya</span>                                
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                <span class="me-1"><i class="ti ti-car ti-xs"></i> Pickup</span><br>
+                                  <span class="badge bg-label-info">Diesel</span>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-md-4">
+                            <div class="text-md-end">
+                              <!-- <button type="button" class="btn-close btn-pinned" aria-label="Close"></button> -->
+                              <div class=""><b class="text-primary">RM300</b> /<span class="text-primary">Day</span></div>
+                              <button type="button" class="btn btn-sm btn-success mt-3">Book Now!</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="card border border-start-0 border-end-0 rounded-0 shadow-none mb-1">
+                  <div class="card-body text-center">
+                    <div class="d-flex gap-3">
+                      <div class="flex-shrink-0 d-flex align-items-center">
+                        <img src="{{asset('assets/img/car/proton.jpeg')}}" alt="google home" class="w-px-150" style="border-radius: 0.375rem;">
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="row">
+                        <div class="text-left" style="text-align: left !important">
+                        <strong class="me-3"><a href="javascript:void(0)" class="text-black">Proton S70 XM 1.6 (A) EBONY BLACK</a></strong>
+                        </div>
+                        
+                          <div class="col-md-8" style="font-size: small">
+                            
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-users ti-xs"></i> 4 Seat</span><br>
+                                  <span class="me-1"><i class="ti ti-map-pin ti-xs"></i> Shah Alam</span>
+                                  
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="" style="text-align: left !important;">
+                                  <span class="me-1"><i class="ti ti-car ti-xs"></i>Sedan</span><br>
+                                  <span class="badge bg-label-success">EV</span>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="col-md-4">
+                            <div class="text-md-end">
+                              <!-- <button type="button" class="btn-close btn-pinned" aria-label="Close"></button> -->
+                              <div class=""><s class="text-muted">RM150</s>&nbsp<b class="text-primary">RM100</b> /<span class="text-primary">Day</span></div>
+                              <button type="button" class="btn btn-sm btn-success mt-3">Book Now!</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -119,95 +653,38 @@ background: linear-gradient(360deg, rgba(233,73,87,1) 0%, rgba(200,25,39,1) 100%
                   </div>
                 </div>
               </div>
+              
 
-              <br>
 
-              <div class="card border shadow-none">
-                <div class="card-body text-center">
-                  <div class="d-flex gap-3">
-                    <div class="flex-shrink-0 d-flex align-items-center">
-                      <img src="{{asset('assets/img/car/car_sport.png')}}" alt="google home" class="w-px-100">
-                    </div>
-                    <div class="flex-grow-1">
-                      <div class="row">
-                        <div class="col-md-8">
-                          <p class="me-3"><a href="javascript:void(0)" class="text-body">Toyota Supra</a></p>
-                          <div class="text-muted mb-2 d-flex flex-wrap"><span class="me-1">Owner:</span> <a href="javascript:void(0)" class="me-3">Zakirin</a> <span class="badge bg-label-success">Available</span></div>
-                          <div class="text-muted mb-2 d-flex flex-wrap"><span class="me-1">Type:</span> <a href="javascript:void(0)" class="me-3">Sedan</a></div>
-                          <div class="text-muted mb-2 d-flex flex-wrap"><span class="me-1">Seat:</span>
-                          <!-- <div class="demo-inline-spacing"> -->
-                            <p>
-                              <span class="badge badge-center bg-primary">1</span>
-                              <span class="badge badge-center bg-primary">2</span>
-                              <span class="badge badge-center bg-secondary">3</span>
-                              <span class="badge badge-center bg-secondary">4</span>
-                              <span class="badge badge-center bg-secondary">5</span>
-                              <span class="badge badge-center bg-secondary">6</span>
-                            </p>
-                          <!-- </div> -->
-                          </div>
-                          
-                        </div>
-                        <div class="col-md-4">
-                          <div class="text-md-end">
-                            <button type="button" class="btn-close btn-pinned" aria-label="Close"></button>
-                            <div class="my-2 my-md-4 mb-md-5"><s class="text-muted">RM450</s>&nbsp<span class="text-primary">RM350</span> /<span class="text-primary">Day</span></div>
-                            <button type="button" class="btn btn-md btn-success mt-md-3">Book Now!</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      </div>
 
-              <br>
+      <!-- Ads Section   -->
 
-              <div class="card border shadow-none">
-                <div class="card-body text-center">
-                  <div class="d-flex gap-3">
-                    <div class="flex-shrink-0 d-flex align-items-center">
-                      <img src="{{asset('assets/img/car/car_sedan.webp')}}" alt="google home" class="w-px-100">
-                    </div>
-                    <div class="flex-grow-1">
-                      <div class="row">
-                        <div class="col-md-8">
-                          <p class="me-3"><a href="javascript:void(0)" class="text-body">Proton Saga BLM</a></p>
-                          <div class="text-muted mb-2 d-flex flex-wrap"><span class="me-1">Owner:</span> <a href="javascript:void(0)" class="me-3">Amat</a> <span class="badge bg-label-success">Available</span></div>
-                          <div class="text-muted mb-2 d-flex flex-wrap"><span class="me-1">Type:</span> <a href="javascript:void(0)" class="me-3">Sedan</a></div>
-                          <div class="text-muted mb-2 d-flex flex-wrap"><span class="me-1">Seat:</span>
-                          <!-- <div class="demo-inline-spacing"> -->
-                            <p>
-                              <span class="badge badge-center bg-primary">1</span>
-                              <span class="badge badge-center bg-primary">2</span>
-                              <span class="badge badge-center bg-primary">3</span>
-                              <span class="badge badge-center bg-primary">4</span>
-                              <span class="badge badge-center bg-secondary">5</span>
-                              <span class="badge badge-center bg-secondary">6</span>
-                            </p>
-                          <!-- </div> -->
-                          </div>
-                          
-                        </div>
-                        <div class="col-md-4">
-                          <div class="text-md-end">
-                            <button type="button" class="btn-close btn-pinned" aria-label="Close"></button>
-                            <div class="my-2 my-md-4 mb-md-5"><s class="text-muted">RM150</s>&nbsp<span class="text-primary">RM90</span> /<span class="text-primary">Day</span></div>
-                            <button type="button" class="btn btn-md btn-success mt-md-3">Book Now!</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <div class="col-lg-4">
+        <div class="card border rounded-0 shadow-none mb-1">
+          <div class="card-body text-center">
+            <div class="bg-primary rounded-1">
+              <h5 class="mb-4 text-white p-4">ERILAVIA Air Freshener 20% Discount. SHOP NOW!</h5>
+            </div>
+            
+            <div class="align-items-center">
+              <img src="{{asset('assets/img/branding/erilavia.jpeg')}}" alt="google home" class="w-100 h-auto rounded-1 shadow" style="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>    
 
               
 
               
 
 <!-- Help Area: Start -->
-<section class="section-py bg-body" style="padding-top: 100px; padding-bottom: 100px;">
+<section class="section-py" style="padding-top: 100px; padding-bottom: 100px; background-color: white">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8 col-lg-6 text-center">

@@ -165,13 +165,13 @@ use App\Http\Controllers\cartell\Home;
 use App\Http\Controllers\UserModule\SubscriptionController;;
 
 // CarTell route starts here
-Route::get('/', [Home::class, 'index'])->name('home');
+Route::get('/landing', [Home::class, 'index'])->name('home');
 Route::get('/coming_soon', [MiscComingSoon::class, 'index'])->name('pages-misc-comingsoon');
 Route::post('/new_subscription', [ SubscriptionController::class, "new_subscription" ])->name('new_subscription');
 Route::get('/pages/misc-comingsoon-return', [MiscComingSoonReturn::class, 'index'])->name('pages-misc-comingsoon-return');
 
 // Main Page Route
-// Route::get('/', [Analytics::class, 'index'])->name('dashboard-analytics');
+Route::get('/', [Analytics::class, 'index'])->name('dashboard-analytics');
 Route::get('/dashboard/analytics', [Analytics::class, 'index'])->name('dashboard-analytics');
 Route::get('/dashboard/crm', [Crm::class, 'index'])->name('dashboard-crm');
 // locale
