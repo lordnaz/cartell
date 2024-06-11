@@ -14,8 +14,123 @@
     <span class="navbar-brand mb-0 h1">
       <img src="{{asset('assets/img/branding/cartell_logo.png')}}" alt="CARTELL" class="w-px-150">  
     </span>
-    <div class="float-right">
-        <a href="{{url('/auth/login-cover')}}" class="btn btn-white" target="_blank"><span class="tf-icons ti ti-login scaleX-n1-rtl me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
+    <div class="" style="padding-right: 50px;">
+        @if (Auth::check())
+        <!-- <span class="text-white">Hi {{Auth::user()->name}}</span> <a href="{{url('/register')}}" class="btn btn-white" target="_blank"><span class="tf-icons ti ti-login scaleX-n1-rtl me-md-1"></span><span class="d-none d-md-block">Dashboard</span></a> -->
+            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+              <div class="d-flex">
+                <div class="flex-shrink-0 me-3">
+                  <div class="avatar avatar-online border-4 border-warning">
+                    <img src="{{ Auth::user() ? Auth::user()->profile_photo_url : asset('assets/img/avatars/1.png') }}" alt class="h-auto rounded-circle" style="border: 2px solid white">
+                  </div>
+                </div>
+                <div class="flex-grow-1">
+                  <span class="fw-medium d-block text-white">
+                    Hello! 
+                  </span>
+                  <span class="fw-medium d-block text-white">
+                    @if (Auth::check())
+                      {{ Auth::user()->name }}
+                    @else
+                    John Doe
+                    @endif
+                  </span>
+                </div>
+              </div>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" style="margin-right: 50px;">
+              
+              <li>
+                <a class="dropdown-item" href="{{ Route::has('profile.show') ? route('profile.show') : url('pages/profile-user') }}">
+                  <i class="ti ti-user-check me-2 ti-sm"></i>
+                  <span class="align-middle">Dashboard</span>
+                </a>
+              </li>
+              <!-- @if (Auth::check() && Laravel\Jetstream\Jetstream::hasApiFeatures())
+              <li>
+                <a class="dropdown-item" href="{{ route('api-tokens.index') }}">
+                  <i class='ti ti-key me-2 ti-sm'></i>
+                  <span class="align-middle">API Tokens</span>
+                </a>
+              </li>
+              @endif -->
+              <!-- <li>
+                <a class="dropdown-item" href="{{url('app/invoice/list')}}">
+                  <span class="d-flex align-items-center align-middle">
+                    <i class="flex-shrink-0 ti ti-credit-card me-2 ti-sm"></i>
+                    <span class="flex-grow-1 align-middle">Order</span>
+                    <span class="flex-shrink-0 badge badge-center rounded-pill bg-label-danger w-px-20 h-px-20">2</span>
+                  </span> </a>
+              </li> -->
+              <!-- @if (Auth::User() && Laravel\Jetstream\Jetstream::hasTeamFeatures())
+              <li>
+                <div class="dropdown-divider"></div>
+              </li>
+              <li>
+                <h6 class="dropdown-header">Manage Team</h6>
+              </li>
+              <li>
+                <div class="dropdown-divider"></div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="{{ Auth::user() ? route('teams.show', Auth::user()->currentTeam->id) : 'javascript:void(0)' }}">
+                  <i class='ti ti-settings me-2'></i>
+                  <span class="align-middle">Team Settings</span>
+                </a>
+              </li>
+              @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
+              <li>
+                <a class="dropdown-item" href="{{ route('teams.create') }}">
+                  <i class='ti ti-user me-2'></i>
+                  <span class="align-middle">Create New Team</span>
+                </a>
+              </li>
+              @endcan
+              @if (Auth::user()->allTeams()->count() > 1)
+              <li>
+                <div class="dropdown-divider"></div>
+              </li>
+              <li>
+                <h6 class="dropdown-header">Switch Teams</h6>
+              </li>
+              <li>
+                <div class="dropdown-divider"></div>
+              </li>
+              @endif -->
+              <!-- @if (Auth::user())
+              @foreach (Auth::user()->allTeams() as $team)
+              {{-- Below commented code read by artisan command while installing jetstream. !! Do not remove if you want to use jetstream. --}}
+
+              <x-switchable-team :team="$team" />
+              @endforeach
+              @endif
+              @endif
+              <li>
+                <div class="dropdown-divider"></div>
+              </li> -->
+              @if (Auth::check())
+              <li>
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                  <i class='ti ti-logout me-2'></i>
+                  <span class="align-middle">Logout</span>
+                </a>
+              </li>
+              <form method="POST" id="logout-form" action="{{ route('logout') }}">
+                @csrf
+              </form>
+              @else
+              <li>
+                <a class="dropdown-item" href="{{ Route::has('login') ? route('login') : url('auth/login-basic') }}">
+                  <i class='ti ti-login me-2'></i>
+                  <span class="align-middle">Login</span>
+                </a>
+              </li>
+              @endif
+            </ul>
+        @else
+        <a href="{{url('/login')}}" class="btn btn-white"><span class="tf-icons ti ti-login scaleX-n1-rtl me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
+        @endif
+        
     </div>
   </div>
 </nav>
