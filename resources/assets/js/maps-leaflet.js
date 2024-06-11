@@ -4446,7 +4446,7 @@
   // --------------------------------------------------------------------
   const userLocationVar = document.getElementById('userLocation');
   if (userLocationVar) {
-    const userLocation = L.map('userLocation').setView([42.35, -71.08], 10);
+    const userLocation = L.map('userLocation').setView([142.35, -71.08], 10);
     userLocation.locate({
       setView: true,
       maxZoom: 16
