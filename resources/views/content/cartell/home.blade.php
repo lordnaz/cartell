@@ -41,9 +41,13 @@
             <ul class="dropdown-menu dropdown-menu-end" style="margin-right: 50px;">
               
               <li>
-                <a class="dropdown-item" href="{{ Route::has('profile.show') ? route('profile.show') : url('pages/profile-user') }}">
+                <!-- <a class="dropdown-item" href="{{ Route::has('profile.show') ? route('profile.show') : url('pages/profile-user') }}">
                   <i class="ti ti-user-check me-2 ti-sm"></i>
-                  <span class="align-middle">Dashboard</span>
+                  <span class="align-middle">My Dashboard</span>
+                </a> -->
+                <a class="dropdown-item" href="{{ route('my-dashboard') }}">
+                  <i class="ti ti-user-check me-2 ti-sm"></i>
+                  <span class="align-middle">My Dashboard</span>
                 </a>
               </li>
               <!-- @if (Auth::check() && Laravel\Jetstream\Jetstream::hasApiFeatures())

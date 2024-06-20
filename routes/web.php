@@ -2,7 +2,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\laravel_example\UserManagement;
 use App\Http\Controllers\dashboard\Analytics;
+use App\Http\Controllers\dashboard\MyDashboard;
 use App\Http\Controllers\dashboard\Crm;
+use App\Http\Controllers\order\MyOrder;
 use App\Http\Controllers\language\LanguageController;
 use App\Http\Controllers\layouts\CollapsedMenu;
 use App\Http\Controllers\layouts\ContentNavbar;
@@ -183,7 +185,21 @@ Route::post('/new_subscription', [ SubscriptionController::class, "new_subscript
 Route::get('/pages/misc-comingsoon-return', [MiscComingSoonReturn::class, 'index'])->name('pages-misc-comingsoon-return');
 
 // Main Page Route
-Route::get('/dashboard', [Analytics::class, 'index'])->name('dashboard-analytics');
+
+// Route::get('/dashboard', [Analytics::class, 'index'])->name('dashboard-analytics');
+
+// login session route 
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+
+    Route::get('/dashboard', [MyDashboard::class, 'index'])->name('my-dashboard');
+
+    Route::get('/order', [MyOrder::class, 'index'])->name('my-order');
+});
+
 Route::get('/dashboard/analytics', [Analytics::class, 'index'])->name('dashboard-analytics');
 Route::get('/dashboard/crm', [Crm::class, 'index'])->name('dashboard-crm');
 // locale
@@ -381,12 +397,4 @@ Route::get('/maps/leaflet', [Leaflet::class, 'index'])->name('maps-leaflet');
 Route::get('/laravel/user-management', [UserManagement::class, 'UserManagement'])->name('laravel-example-user-management');
 Route::resource('/user-list', UserManagement::class);
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+

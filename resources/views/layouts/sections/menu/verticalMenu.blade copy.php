@@ -9,16 +9,15 @@ $configData = Helper::appClasses();
   <div class="app-brand demo">
     <a href="{{url('/')}}" class="app-brand-link">
       <span class="app-brand-logo demo">
-        <!-- @include('_partials.macros',["height"=>20]) -->
-        <img class="img-fluid d-flex mx-auto rounded mb-1" src="{{asset('assets/img/branding/logo.png')}}" style="height: 20px;" alt="Card image cap" />
+        @include('_partials.macros',["height"=>20])
       </span>
-      <span class="app-brand-text demo menu-text fw-bold text-primary">{{config('variables.templateName')}}</span>
+      <span class="app-brand-text demo menu-text fw-bold">{{config('variables.templateName')}}</span>
     </a>
 
-    <!-- <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+    <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
       <i class="ti menu-toggle-icon d-none d-xl-block ti-sm align-middle"></i>
       <i class="ti ti-x d-block d-xl-none ti-sm align-middle"></i>
-    </a> -->
+    </a>
   </div>
   @endif
 
