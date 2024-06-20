@@ -296,6 +296,7 @@ $navbarDetached = ($navbarDetached ?? '');
                 <div class="dropdown-divider"></div>
               </li>
               <li>
+<<<<<<< HEAD
                 <a class="dropdown-item" href="{{ route('home') }}">
                   <i class="ti ti-home me-2 ti-sm"></i>
                   <span class="align-middle text-primary">Go To Home</span>
@@ -305,6 +306,8 @@ $navbarDetached = ($navbarDetached ?? '');
                 <div class="dropdown-divider"></div>
               </li>
               <li>
+=======
+>>>>>>> c5f0ff1e7df27b9a7884b7504c4da31c449482b3
                 <a class="dropdown-item" href="{{ Route::has('profile.show') ? route('profile.show') : url('pages/profile-user') }}">
                   <i class="ti ti-user-check me-2 ti-sm"></i>
                   <span class="align-middle">My Profile</span>
