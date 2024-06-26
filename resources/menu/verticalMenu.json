@@ -7,10 +7,16 @@
       "slug": "my-dashboard"
     },
     {
-      "url": "order",
+      "url": "orders",
       "name": "Orders",
-      "icon": "menu-icon tf-icons ti ti-text-wrap-disabled",
-      "slug": "my-order"
+      "icon": "menu-icon tf-icons ti ti-shopping-cart",
+      "slug": "my-orders"
+    },
+    {
+      "url": "products",
+      "name": "Products",
+      "icon": "menu-icon tf-icons ti ti-package",
+      "slug": "my-products"
     },
     {
       "menuHeader": ""

@@ -27,21 +27,44 @@
 
 @section('content')
 
+@php
+    $user = auth()->user();
+
+
+@endphp
+
+<h4 class="py-3 mb-4">
+    Main Dashboard
+</h4>
+
 <!-- Desktop View  -->
 <section class="d-none d-lg-block">
+
+    @if($user->user_info_complete == false)
+    <div class="row">
+        <div class="col">
+            <div class="alert alert-primary alert-dismissible" role="alert">
+            User information not completed. Click <a href="/user/profile"><u>HERE</u></a> to update.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+            </button>
+            </div>
+        </div>
+    </div>
+    @endif
+
     <div class="row">
         <div class="col-6">
             <div class="card" style="height: 180px">
                 <div class="d-flex align-items-end row">
                     <div class="col-7">
-                    <div class="card-body text-nowrap">
-                        <h5 class="card-title mb-0">Welcome to CarTell <b class="text-primary">{{ Auth::user()->name }}</b> !🎉</h5>
-                        <br>
-                        <span class="">Here, you can <a class="text-primary" href="/"><b><u>rent</u></b></a> a car</span><br>
-                        <span class="text-primary">OR</span><br>
-                        <span class="">Register as a</span>&nbsp;&nbsp;
-                        <a href="javascript:;" class="btn btn-outline-primary">Renter</a>
-                    </div>
+                        <div class="card-body text-nowrap">
+                            <h5 class="card-title mb-0">Welcome to CarTell <b class="text-primary">{{ Auth::user()->name }}</b> !🎉</h5>
+                            <br>
+                            <span class="">Here, you can <a class="text-primary" href="/"><b><u>rent</u></b></a> a car</span><br>
+                            <span class="text-primary">OR</span><br>
+                            <span class="">Register as a</span>&nbsp;&nbsp;
+                            <a href="javascript:;" class="btn btn-outline-primary">Renter</a>
+                        </div>
                     </div>
                     <div class="col-5 text-center text-sm-left">
                     <div class="card-body pb-0 px-0 px-md-4">
@@ -52,7 +75,7 @@
             </div>
         </div>
         <div class="col-3">
-            <div class="card" style="height: 180px">
+            <div class="card card-border-shadow-success" style="height: 180px">
                 <div class="card-body">
                     <div class="d-flex">
                         <div class="avatar flex-shrink-0 me-2">

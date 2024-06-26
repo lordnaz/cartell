@@ -5,6 +5,7 @@ use App\Http\Controllers\dashboard\Analytics;
 use App\Http\Controllers\dashboard\MyDashboard;
 use App\Http\Controllers\dashboard\Crm;
 use App\Http\Controllers\order\MyOrder;
+use App\Http\Controllers\product\MyProduct;
 use App\Http\Controllers\language\LanguageController;
 use App\Http\Controllers\layouts\CollapsedMenu;
 use App\Http\Controllers\layouts\ContentNavbar;
@@ -197,7 +198,11 @@ Route::middleware([
 
     Route::get('/dashboard', [MyDashboard::class, 'index'])->name('my-dashboard');
 
-    Route::get('/order', [MyOrder::class, 'index'])->name('my-order');
+    Route::get('/orders', [MyOrder::class, 'index'])->name('my-orders');
+
+    Route::get('/products', [MyProduct::class, 'index'])->name('my-products');
+
+    Route::get('/product/add', [MyProduct::class, 'view_add_product'])->name('view_add_product');
 });
 
 Route::get('/dashboard/analytics', [Analytics::class, 'index'])->name('dashboard-analytics');
