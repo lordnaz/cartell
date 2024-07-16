@@ -1,6 +1,6 @@
 @extends('layouts/layoutMaster')
 
-@section('title', 'Help Center Landing - Front Pages')
+@section('title', 'Landing Page')
 
 @section('page-style')
 @vite('resources/assets/vendor/scss/pages/front-page-help-center.scss')

@@ -306,8 +306,8 @@ $navbarDetached = ($navbarDetached ?? '');
               </li>
               <li>
                 <a class="dropdown-item" href="{{ Route::has('profile.show') ? route('profile.show') : url('pages/profile-user') }}">
-                  <i class="ti ti-user-check me-2 ti-sm"></i>
-                  <span class="align-middle">My Profile</span>
+                  <i class="ti ti-settings me-2 ti-sm"></i>
+                  <span class="align-middle">Profile Setting</span>
                 </a>
               </li>
               @if (Auth::check() && Laravel\Jetstream\Jetstream::hasApiFeatures())
