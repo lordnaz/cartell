@@ -12,4 +12,8 @@ class MyDashboard extends Controller
     {
         return view('content.dashboard.my-dashboard');
     }
+
+    public function bank_information(){
+        return view('profile.bank-information');
+    }
 }

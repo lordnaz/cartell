@@ -203,6 +203,8 @@ Route::middleware([
     Route::get('/products', [MyProduct::class, 'index'])->name('my-products');
 
     Route::get('/product/add', [MyProduct::class, 'view_add_product'])->name('view_add_product');
+
+    Route::get('/user/profile/bank', [MyDashboard::class, 'bank_information'])->name('my-bank');
 });
 
 Route::get('/dashboard/analytics', [Analytics::class, 'index'])->name('dashboard-analytics');
